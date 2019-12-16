@@ -1,0 +1,16 @@
+{
+  "name": "worker",
+  "version": "1.0.0",
+  "description": "worker service for this application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon"
+  },
+  "author": "kola adebayo",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.1",
+    "redis": "^2.8.0"
+  }
+}
