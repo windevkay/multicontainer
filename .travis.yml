@@ -19,3 +19,17 @@ after_success:
     - docker push kolabayo360/multi-nginx
     - docker push kolabayo360/multi-server
     - docker push kolabayo360/multi-worker
+
+deploy:
+    provider: elasticbeanstalk
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key:
+     secure: "$AWS_SECRET_KEY"
+    region: "us-east-2"
+    app: "multidocker"
+    env: "Multidocker-env"
+    edge: true
+    bucket_name: "elasticbeanstalk-us-east-2-428843796780"
+    bucket_path: "docker-multi"
+    on:
+     branch: master
